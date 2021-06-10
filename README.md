@@ -75,17 +75,17 @@ download [here](https://github.com/litex-hub/linux-on-litex-rocket/issues/1).
 ## Building the Gateware (FPGA Bitstream):
 
 The five boards currently tested are `digilent_nexys4ddr`, `trellisboard`,
-`lambdaconcept_ecpix5`, `lattice_versa_ecp5`, and `digilent_arty`. Once all prerequisites are in
-place, building bitstream for each one is a relatively straightforward process.
+`lambdaconcept_ecpix5`, `lattice_versa_ecp5`, and `digilent_arty`. Once all
+prerequisites are in place, building bitstream for each one is a relatively
+straightforward process.
 
 ***NOTE 1***: The difference between the `linux`, `linuxd`, and `linuxq`
 variants of the Rocket cpu-type is in the bit width of the point-to-point
 AXI link connecting the CPU and LiteDRAM controller specific to each particular
-board model.
-On `digilent_nexys4ddr`, LiteDRAM has a native
-port width of 64 bits;
-on the `trellisboard`, the native LiteDRAM width is 256 bits; finally, on
-both `lambdaconcept_ecpix5`, `lattice_versa_ecp5` and `digilent_arty`, LiteDRAM is 128 bit wide.
+board model. On `digilent_nexys4ddr`, LiteDRAM has a native port width of
+64 bits; on the `trellisboard`, the native LiteDRAM width is 256 bits; finally,
+on both `lambdaconcept_ecpix5`, `lattice_versa_ecp5` and `digilent_arty`,
+LiteDRAM is 128 bit wide.
 
 How to tell what the appropriate port width is on a ***new*** board?
 Right after starting the bitstream build process, watch for output that looks
@@ -303,7 +303,7 @@ to fit a RocketChip version with a "real" FPU (implemented in gateware).
    `lattice_versa_ecp5` and `digilent_arty`. The example below uses
    [`nexys4ddr.dts`](conf/nexys4ddr.dts), but feel free
    to replace that with [`trellisboard.dts`](conf/trellisboard.dts),
-   [`ecpix5.dts`](conf/ecpix5.dts), [`versa_ecp5.dts`](conf/versa_ecp5.dts), 
+   [`ecpix5.dts`](conf/ecpix5.dts), [`versa_ecp5.dts`](conf/versa_ecp5.dts),
    or [`arty.dts`](conf/arty.dts) as needed:
 
    ```
